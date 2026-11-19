@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple browser-based task manager">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header><p class="eyebrow">MAKE TODAY COUNT</p><h1>My Tasks</h1><p class="muted">A little progress every day.</p></header>
+    <form id="task-form">
+      <label class="sr-only" for="task-input">New task</label>
+      <input id="task-input" maxlength="120" placeholder="What needs to be done?" required>
+      <button type="submit">Add task</button>
+    </form>
+    <nav class="filters" aria-label="Task filters">
+      <button type="button" data-filter="all" class="selected">All</button>
+      <button type="button" data-filter="active">Active</button>
+      <button type="button" data-filter="completed">Completed</button>
+    </nav>
+    <p id="task-count" class="muted" aria-live="polite"></p>
+    <ul id="task-list"></ul>
+    <p id="empty-state" class="empty">No tasks here yet. Add one above!</p>
+    <footer><button id="clear-completed" class="text-button" type="button">Clear completed</button></footer>
+  </main>
+</body>
+</html>
